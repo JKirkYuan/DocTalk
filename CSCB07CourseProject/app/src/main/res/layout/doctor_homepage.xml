@@ -19,7 +19,7 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:text="@string/client_e_mail"
+            android:text="@string/doc_intro"
             android:layout_height="wrap_content"/>
 
         <EditText
@@ -29,107 +29,6 @@
             android:inputType="textEmailAddress"
             android:layout_height="wrap_content" />
 
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="fill_parent"
-            android:layout_alignParentBottom="true">
-
-
-            <Button
-                android:id="@+id/b_edit_view_client"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="@string/bt_edit_client_info_link"
-                android:onClick="onClickEditClientInfo">
-            </Button>
-
-            <Button
-                android:id="@+id/b_clients_itineraries"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="@string/bt_view_client_booked_itineraries_link"
-                android:onClick="onClickViewClientsItineraries">
-            </Button>
-
-            <Button
-                android:id="@+id/b_search_book_clients_itineraries"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:text="@string/bt_edit_client_itineraries__link"
-                android:onClick="onClickAdminSearchFlights">
-            </Button>
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="@string/flight_number"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id = "@+id/et_flight_number"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:inputType="text"
-            android:layout_height="wrap_content" />
-
-        <Button
-                android:id="@+id/b_edit_flights"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/bt_edit_flight_link"
-                android:onClick="onClickEditFlights">
-        </Button>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="@string/s_client_load_file"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id = "@+id/et_client_file"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:inputType="text"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/b_load_client_file"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bt_client_load_file"
-            android:onClick="onClickLoadClientFile"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="@string/s_flight_load_file"
-            android:layout_height="wrap_content"/>
-
-        <EditText
-            android:id = "@+id/et_flight_file"
-            android:layout_width="match_parent"
-            android:layout_marginBottom="10dp"
-            android:inputType="text"
-            android:layout_height="wrap_content" />
-
-        <Button
-            android:id="@+id/b_load_flight_file"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/bt_flight_load_file"
-            android:onClick="onClickLoadFlightFile"/>
-
-
-        <Button
-            android:id="@+id/b_logout"
-            android:text="@string/bt_log_out"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="onClickLoadAdminLogOut"/>
 
 </LinearLayout>
 

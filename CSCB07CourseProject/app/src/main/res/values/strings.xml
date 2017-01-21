@@ -1,6 +1,6 @@
 <resources>
     <!-- title strings for the app pages -->
-    <string name="app_name">FlightBook</string>
+    <string name="app_name">DocTalk</string>
 
     <!-- variable name strings -->
     <string name="user_name">Username</string>
@@ -16,7 +16,7 @@
     <string name="destination">Destination</string>
     <string name="date">Date</string>
     <string name="flight_number">Flight no:</string>
-    <string name="client_e_mail">Client\'s e-mail:</string>
+    <string name="doc_intro">Here are your cases....</string>
 
     <!-- button text strings (bt means button text) -->
     <string name="bt_search">Search</string>
@@ -40,7 +40,7 @@
     <string name="wt_admin_search_flight">Admin, add a flights for: </string>
     <string name="wt_for_display_searched_flight">List of itineraries:</string>
     <string name="wt_client_homepage">Welcome!</string>
-    <string name="wt_admin_homepage">Welcome Admin!</string>
+    <string name="wt_admin_homepage">Hello Doctor</string>
     <string name="wt_search_flights">Search your Flights!</string>
         <!-- separators for forms, etc-->
     <string name="s_booked_flights_separator">Booked Flights:</string>

@@ -31,12 +31,12 @@ public class DoctorHomepage extends AppCompatActivity {
         Intent intent = getIntent();
         driver = (Driver) intent.getSerializableExtra("driver");
         admin = (Admin) intent.getSerializableExtra("admin");
-        et_client_file = (EditText) findViewById(R.id.et_client_file);
-        et_flight_file = (EditText) findViewById(R.id.et_flight_file);
         et_email = (EditText) findViewById(R.id.et_clients_email);
-        et_flightNo = (EditText) findViewById(R.id.et_flight_number);
+
 
     }
+
+
 
 
     public void onClickLoadAdminLogOut(View v) {
