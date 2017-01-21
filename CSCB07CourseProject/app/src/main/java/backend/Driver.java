@@ -106,12 +106,12 @@ public class Driver extends AppCompatActivity implements java.io.Serializable {
    *         LastName;FirstNames;Email;Address;CreditCardNumber;ExpiryDate (the
    *         ExpiryDate is stored in the format yyyy-MM-dd)
    */
-  public Client getClient(String email) {
+  public Patient getClient(String email) {
 
-    HashMap<String, Client> clients = this.clientDatabase.deserialize();
+    HashMap<String, Patient> clients = this.clientDatabase.deserialize();
 
-    Client specificClient = clients.get(email);
-    return specificClient;
+    Patient specificPatient = clients.get(email);
+    return specificPatient;
     
 
     // The code below gives you the format in which the auto-tester expects
@@ -238,7 +238,7 @@ public class Driver extends AppCompatActivity implements java.io.Serializable {
     Date dateObj = null;
     dateObj = dateTime.parse(date);
     // Instanced client
-    ResultItinerary ret = new Client("a", "a", "a", "a", "a", "a", dateObj).searchItinerary(origin,
+    ResultItinerary ret = new Patient("a", "a", "a", "a", "a", "a", dateObj).searchItinerary(origin,
         destination, dateObj, this);
     // String flightNum1 = "AC213";
     // Date departure1 = null;
@@ -327,7 +327,7 @@ public class Driver extends AppCompatActivity implements java.io.Serializable {
     dateObj = dateTime.parse(date);
 
     // Instanced client
-    ResultItinerary ret = new Client("a", "a", "a", "a", "a", "a", dateObj).searchItinerary(origin,
+    ResultItinerary ret = new Patient("a", "a", "a", "a", "a", "a", dateObj).searchItinerary(origin,
         destination, dateObj, this);
     ResultItinerary sortedRet = ret.sortByCost();
     boolean canAdd = true;
@@ -374,7 +374,7 @@ public class Driver extends AppCompatActivity implements java.io.Serializable {
     Date dateObj = null;
     dateObj = dateTime.parse(date);
     // Instanced client
-    ResultItinerary ret = new Client("a", "a", "a", "a", "a", "a", dateObj).searchItinerary(origin,
+    ResultItinerary ret = new Patient("a", "a", "a", "a", "a", "a", dateObj).searchItinerary(origin,
         destination, dateObj, this);
     ResultItinerary sortedRet = ret.sortByTime();
     boolean canAdd = true;

@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
-import backend.Admin;
-import backend.Client;
+import backend.Doctor;
+import backend.Patient;
 import backend.Driver;
 
 
@@ -21,8 +21,8 @@ public class DoctorHomepage extends AppCompatActivity {
     public static final String CLIENT_DB = "client_db";
     EditText et_flight_file, et_client_file, et_email, et_flightNo;
     Driver driver;
-    Admin admin;
-    Client client;
+    Doctor doctor;
+    Patient patient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class DoctorHomepage extends AppCompatActivity {
         setContentView(R.layout.doctor_homepage);
         Intent intent = getIntent();
         driver = (Driver) intent.getSerializableExtra("driver");
-        admin = (Admin) intent.getSerializableExtra("admin");
+        doctor = (Doctor) intent.getSerializableExtra("doctor");
         et_email = (EditText) findViewById(R.id.et_clients_email);
 
 

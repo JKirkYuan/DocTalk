@@ -29,7 +29,7 @@ public class ClientDatabase extends Database implements java.io.Serializable {
 
   private static final long serialVersionUID = 1L;
   private String filepath;
-  private HashMap<String, Client> clients;
+  private HashMap<String, Patient> clients;
 
   private static final int REQUEST_EXTERNAL_STORAGE = 1;
   private static String[] PERMISSIONS_STORAGE = {
@@ -45,7 +45,7 @@ public class ClientDatabase extends Database implements java.io.Serializable {
    */
   public ClientDatabase(String filepath) {
     this.filepath=filepath;
-//    this.clients = new HashMap<String, Client>();
+//    this.clients = new HashMap<String, Patient>();
 //    serialize(clients);
     this.clients = this.deserialize();
   }
@@ -57,18 +57,18 @@ public class ClientDatabase extends Database implements java.io.Serializable {
    * @return the HashMap that stores all the clients
    */
   @SuppressWarnings("unchecked")
-  public HashMap<String, Client> deserialize() {
-    HashMap<String, Client> object = null;
+  public HashMap<String, Patient> deserialize() {
+    HashMap<String, Patient> object = null;
     try {
       FileInputStream fileIn = new FileInputStream(filepath);
       ObjectInputStream in = new ObjectInputStream(fileIn);
-      object = (HashMap<String, Client>) in.readObject();
+      object = (HashMap<String, Patient>) in.readObject();
       in.close();
       fileIn.close();
     } catch (IOException in) {
       in.printStackTrace();
     } catch (ClassNotFoundException cl) {
-      System.out.println("Client class not found");
+      System.out.println("Patient class not found");
       cl.printStackTrace();
     }
     return object;
@@ -80,7 +80,7 @@ public class ClientDatabase extends Database implements java.io.Serializable {
    * @param clients
    *          the HashMap to be serialized
    */
-  public void serialize(HashMap<String, Client> clients) {
+  public void serialize(HashMap<String, Patient> clients) {
     try {
       FileOutputStream fileOut = new FileOutputStream(this.filepath);
       ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -93,22 +93,22 @@ public class ClientDatabase extends Database implements java.io.Serializable {
   }
 
   /**
-   * Adds a <code>Client</code> to the <code>ClientDatabase</code>.
+   * Adds a <code>Patient</code> to the <code>ClientDatabase</code>.
    * 
-   * @param client
-   *          the <code>Client</code> instance to be added
+   * @param patient
+   *          the <code>Patient</code> instance to be added
    */
-  public void addClient(Client client) {
-    String key = client.getEmail();
-    this.clients.put(key, client);
+  public void addClient(Patient patient) {
+    String key = patient.getEmail();
+    this.clients.put(key, patient);
     serialize(clients);
   }
 
   /**
-   * Removes a specific <code>Client</code> to the <code>ClienttDatabase</code>
+   * Removes a specific <code>Patient</code> to the <code>ClienttDatabase</code>
    * 
    * @param email
-   *          the <code>email</code> of the <code>Client</code> to be removed.
+   *          the <code>email</code> of the <code>Patient</code> to be removed.
    */
   public void removeClient(String email) {
     this.clients.remove(email);
@@ -120,7 +120,7 @@ public class ClientDatabase extends Database implements java.io.Serializable {
    * 
    * @return the clients
    */
-  public HashMap<String, Client> getClient() {
+  public HashMap<String, Patient> getClient() {
     return clients;
   }
 
@@ -136,7 +136,7 @@ public class ClientDatabase extends Database implements java.io.Serializable {
    */
   public void addClientsFromFile(String filepath) throws IOException, ParseException {
     // Path filePath = Paths.get(filepath);
-    // HashMap<String, Client> clients = new HashMap<String, Client>();
+    // HashMap<String, Patient> clients = new HashMap<String, Patient>();
     String line;
     File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/" + filepath);
     // reads client.txt line by line
@@ -162,8 +162,8 @@ public class ClientDatabase extends Database implements java.io.Serializable {
       DateFormat date = new SimpleDateFormat("yyyy-MM-dd");
       expiryDate = date.parse(splitArray[5]);
       password = splitArray[6];
-      Client addThisClient = new Client(email, firstName, lastName, address, password, ccNumber, expiryDate);
-      this.clients.put(email, addThisClient);
+      Patient addThisPatient = new Patient(email, firstName, lastName, address, password, ccNumber, expiryDate);
+      this.clients.put(email, addThisPatient);
 
     }
     reader.close();
@@ -190,7 +190,7 @@ public class ClientDatabase extends Database implements java.io.Serializable {
      */
 
   public boolean checkPassword(String password){
-    for(Client c: clients.values()){
+    for(Patient c: clients.values()){
       if(c.getPassword() == password){
         return true;
       }
@@ -199,7 +199,7 @@ public class ClientDatabase extends Database implements java.io.Serializable {
   }
 
   public void setClientEmail(String newEmail, String oldEmail){
-    Client temp = clients.get(oldEmail);
+    Patient temp = clients.get(oldEmail);
     clients.remove(oldEmail);
     temp.setEmail(newEmail);
     clients.put(newEmail, temp);

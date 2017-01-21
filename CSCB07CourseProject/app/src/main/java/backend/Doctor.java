@@ -7,33 +7,33 @@ package backend;
 //import java.util.List;
 
 /**
- * A class that represents an <code>Admin</code>.
+ * A class that represents an <code>Doctor</code>.
  * 
  * @author Mandy
  *
  */
-public class Admin extends Account {
+public class Doctor extends Account {
 
   private static final long serialVersionUID = 1L;
 
   /**
-   * Creates a new instance of <code> Admin </code>.
+   * Creates a new instance of <code> Doctor </code>.
    * 
    * @param email
-   *          the unique email of the Admin, it is used an identifer
+   *          the unique email of the Doctor, it is used an identifer
    * @param firstName
-   *          the first name of the Admin user
+   *          the first name of the Doctor user
    * @param lastName
-   *          the last name of the Admin user
+   *          the last name of the Doctor user
    * @param password
-   *          the password of the Admin user
+   *          the password of the Doctor user
    */
-  public Admin(String email, String firstName, String lastName, String password) {
+  public Doctor(String email, String firstName, String lastName, String password) {
     super(email, firstName, lastName, password);
   }
 
   /**
-   * Given a FlightFile, Admin can access the file that contains the info of the
+   * Given a FlightFile, Doctor can access the file that contains the info of the
    * flight and uploads it to flight database.
    * 
    * @param flightFile
@@ -45,11 +45,11 @@ public class Admin extends Account {
   }
 
   // /**
-  // * Given a Client, Admin can view all of the client's info.
+  // * Given a Patient, Doctor can view all of the client's info.
   // *
-  // * @param client The specific client account the Admin will view
+  // * @param client The specific client account the Doctor will view
   // */
-  // public List<String> viewData(Client client) {
+  // public List<String> viewData(Patient client) {
   // // Need to discuss with group if we are implementing List<String> or
   // another Object type.
   // List<String> clientData = new ArrayList<String>();

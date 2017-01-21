@@ -30,7 +30,7 @@ public class SampleTests {
         String expected = "Roe;Richard;richard@email.com;21 First Lane Way;9999888877776666;2017-10-01";
         String found = Driver.getClient("richard@email.com");
         String msg =
-                "Unexpected (incorrect or incorrectly formatted) client information "
+                "Unexpected (incorrect or incorrectly formatted) patient information "
                         + "string was returned.";
 
         assertEquals(msg, expected, found);

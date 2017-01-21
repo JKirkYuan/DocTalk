@@ -30,7 +30,7 @@
     <string name="bt_update">update</string>
     <string name="bt_login">Login</string>
     <string name="bt_flight_load_file">load flight file</string>
-    <string name="bt_client_load_file">load client file</string>
+    <string name="bt_client_load_file">load patient file</string>
     <string name="bt_edit_client_info_link">Client Info</string>
     <string name="bt_view_client_booked_itineraries_link">Client Bookings</string>
     <string name="bt_edit_client_itineraries__link">Book for Client</string>
@@ -44,7 +44,7 @@
     <string name="wt_search_flights">Search your Flights!</string>
         <!-- separators for forms, etc-->
     <string name="s_booked_flights_separator">Booked Flights:</string>
-    <string name="s_client_load_file">Choose a client file to load:</string>
+    <string name="s_client_load_file">Choose a patient file to load:</string>
     <string name="s_flight_load_file">Choose a flight file to load:</string>
         <!-- notifications for important events-->
     <string name="n_of_account_creation">Congratulations! \n You have successfully registered your account.</string>

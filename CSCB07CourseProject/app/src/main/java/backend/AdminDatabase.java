@@ -16,7 +16,7 @@ import java.util.HashMap;
 public class AdminDatabase extends Database {
 
   private String filepath;
-  private HashMap<String, Admin> admins;
+  private HashMap<String, Doctor> admins;
 
   /**
    * Creates a new instance of a <code>AdminDatabase</code>.
@@ -36,18 +36,18 @@ public class AdminDatabase extends Database {
    * @return the HashMap that stores all the admins
    */
   @SuppressWarnings("unchecked")
-  public HashMap<String, Admin> deserialize() {
-    HashMap<String, Admin> object = null;
+  public HashMap<String, Doctor> deserialize() {
+    HashMap<String, Doctor> object = null;
     try {
       FileInputStream fileIn = new FileInputStream(this.filepath);
       ObjectInputStream in = new ObjectInputStream(fileIn);
-      object = (HashMap<String, Admin>) in.readObject();
+      object = (HashMap<String, Doctor>) in.readObject();
       in.close();
       fileIn.close();
     } catch (IOException in) {
       in.printStackTrace();
     } catch (ClassNotFoundException cl) {
-      System.out.println("Admin class not found");
+      System.out.println("Doctor class not found");
       cl.printStackTrace();
     }
     return object;
@@ -59,7 +59,7 @@ public class AdminDatabase extends Database {
    * @param adminHash
    *          the HashMap to be serialized
    */
-  public void serialize(HashMap<String, Admin> adminHash) {
+  public void serialize(HashMap<String, Doctor> adminHash) {
     try {
       FileOutputStream fileOut = new FileOutputStream(this.filepath);
       ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -72,22 +72,22 @@ public class AdminDatabase extends Database {
   } // end serialize
 
   /**
-   * Adds a <code>Admin</code> to the <code>AdminDatabase</code>.
+   * Adds a <code>Doctor</code> to the <code>AdminDatabase</code>.
    * 
-   * @param admin
-   *          the <code>admin</code> instance to be added
+   * @param doctor
+   *          the <code>doctor</code> instance to be added
    */
-  public void addAdmin(Admin admin) {
-    String key = admin.getEmail();
-    this.admins.put(key, admin);
+  public void addAdmin(Doctor doctor) {
+    String key = doctor.getEmail();
+    this.admins.put(key, doctor);
     serialize(admins);
   }
 
   /**
-   * Removes a specific <code>Admin</code> to the <code>AdminDatabase</code>.
+   * Removes a specific <code>Doctor</code> to the <code>AdminDatabase</code>.
    * 
    * @param adminNumber
-   *          the <code>adminNumber</code> of the <code>Admin</code> to be
+   *          the <code>adminNumber</code> of the <code>Doctor</code> to be
    *          removed.
    */
   public void removeAdmin(String adminNumber) {
@@ -100,7 +100,7 @@ public class AdminDatabase extends Database {
    * 
    * @return the admins
    */
-  public HashMap<String, Admin> getadmins() {
+  public HashMap<String, Doctor> getadmins() {
     return admins;
   }
 
@@ -110,7 +110,7 @@ public class AdminDatabase extends Database {
    * @param admins
    *          the new set of admins
    */
-  public void setadmins(HashMap<String, Admin> admins) {
+  public void setadmins(HashMap<String, Doctor> admins) {
     this.admins = admins;
   }
 

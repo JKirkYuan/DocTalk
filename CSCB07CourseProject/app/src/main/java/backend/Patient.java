@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Client extends Account implements java.io.Serializable {
+public class Patient extends Account implements java.io.Serializable {
 
   private static final long serialVersionUID = 1L;
   private String address;
@@ -22,7 +22,7 @@ public class Client extends Account implements java.io.Serializable {
 
 
   /**
-   * Creates a new instance of the Client with the parameter.
+   * Creates a new instance of the Patient with the parameter.
    *
    * @param email
    *          Email address of the <code>client</code>
@@ -37,8 +37,8 @@ public class Client extends Account implements java.io.Serializable {
    * @param creditCardExpiry
    *          Expiration date of teh <code>client</code>'s credit card
    */
-  public Client(String email, String firstName, String lastName, String address, String password,
-                String creditCardNumber, Date creditCardExpiry) {
+  public Patient(String email, String firstName, String lastName, String address, String password,
+                 String creditCardNumber, Date creditCardExpiry) {
     super(email, firstName, lastName, password);
     this.address = address;
     this.creditCardNumber = creditCardNumber;
@@ -47,8 +47,8 @@ public class Client extends Account implements java.io.Serializable {
 
   }
 
-  public Client(String email, String firstName, String lastName, String address,
-                String creditCardNumber, String creditCardExpiryString) {
+  public Patient(String email, String firstName, String lastName, String address,
+                 String creditCardNumber, String creditCardExpiryString) {
     super(email, firstName, lastName);
     this.address = address;
     this.creditCardNumber = creditCardNumber;
@@ -56,7 +56,7 @@ public class Client extends Account implements java.io.Serializable {
   }
 
   /**
-   * Given a Itinerary, removes that Itinerary from the itinerary of the Client.
+   * Given a Itinerary, removes that Itinerary from the itinerary of the Patient.
    *
    * @param booking
    *          The Itinerary or flights to be removed from the itinerary
@@ -217,7 +217,7 @@ public class Client extends Account implements java.io.Serializable {
     if (getClass() != obj.getClass()) {
       return false;
     }
-    Client other = (Client) obj;
+    Patient other = (Patient) obj;
     if (address == null) {
       if (other.address != null) {
         return false;
