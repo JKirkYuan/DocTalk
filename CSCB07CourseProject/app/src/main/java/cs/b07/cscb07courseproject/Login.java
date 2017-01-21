@@ -47,12 +47,6 @@ public class Login extends AppCompatActivity {
         this.driver = (Driver) intent.getSerializableExtra("driver");
     }
 
-    public void onClickRegister(View v) {
-        //send to register page
-        Intent intentRegister = new Intent(this, ClientRegistration.class);
-        intentRegister.putExtra("driver", this.driver);
-        startActivity(intentRegister);
-        }
 
     public void onClickLogin(View v) {
         String email = et_email.getText().toString();

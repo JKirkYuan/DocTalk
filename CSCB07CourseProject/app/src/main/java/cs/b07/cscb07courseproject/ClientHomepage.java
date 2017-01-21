@@ -102,50 +102,10 @@ public class ClientHomepage extends AppCompatActivity {
                 return true;
             }
         });
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            public void onItemClick(AdapterView <? > arg0, View view, int position, long id) {
-                // When clicked, make the information of the itinerary given to the next activity
-                Log.w("path", "Clicked on List item");
-                // since we are not technically in the same anymore, we have to find the class
-                // and then try to reference it from here to get the actual items
-                ClientHomepage.this.removeBooking(result.get(position));
-                ClientHomepage.this.setUpPage();
-            }
-
-        });
-    }
-
-    public void removeBooking(Itinerary itinerary){
-        // just get the client and remove the result itinerary
-        client.cancelItinerary(itinerary);
-        // update the driver with the fact that someone cancelled
-        driver.getClientDatabase().addClient(client);
-        for(Trip tripInDr: driver.getFlightDatabase().getFlights().values()) {
-            Flight flightInDir = (Flight) tripInDr;
-            for (Trip tripInIt : itinerary.getTripList()) {
-                Flight flightInIt = (Flight) tripInIt;
-                if(flightInDir.equals(flightInIt)){
-                    tripInDr.addNewSeats(1);
-                    Log.w("path", "removed the seat in the driver");
-                }
-            }
-        }
 
     }
 
-    public void onClickSearchFlights(View v) {
-        Intent intentSearch = new Intent(this, ClientSearchFlights.class);
-        intentSearch.putExtra("driver", driver);
-        intentSearch.putExtra("client", client);
-        startActivity(intentSearch);
-    }
 
-    public void onClickEditProfile(View v) {
-        Intent intentEdit = new Intent(this, EditProfile.class);
-        intentEdit.putExtra("driver", driver);
-        intentEdit.putExtra("client", client);
-        startActivity(intentEdit);
-    }
 
     public void Logout(View v) {
         Intent intentLogout = new Intent(this, Login.class);

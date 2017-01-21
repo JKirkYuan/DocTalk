@@ -19,39 +19,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ClientRegistration"> </activity>
-
         <activity android:name=".ClientHomepage"> </activity>
-
-        <activity android:name=".EditProfile"> </activity>
-
-        <activity android:name=".RegisteredClient"> </activity>
-
-        <activity android:name=".ClientBookingResult"> </activity>
-
-        <activity android:name=".ClientSearchFlights"> </activity>
-
-        <activity android:name=".ClientDisplaySearchedFlights"> </activity>
 
         <activity android:name=".AdminHomepage"> </activity>
 
-        <activity android:name=".AdminEditClientInfo"> </activity>
-
-        <activity android:name=".AdminDisplaySearchedFlights"> </activity>
-
-        <activity android:name=".AdminSearchFlights"> </activity>
-
         <activity android:name=".AdminLogout"> </activity>
-
-        <activity android:name=".AdminEditFlights"> </activity>
-
-        <activity android:name=".AdminDisplayFlightDB"> </activity>
-
-        <activity android:name=".AdminDisplayClientDB"> </activity>
-
-        <activity android:name=".AdminBookFlights"> </activity>
-
-        <activity android:name=".AdminBookResults"> </activity>
 
     </application>
 
