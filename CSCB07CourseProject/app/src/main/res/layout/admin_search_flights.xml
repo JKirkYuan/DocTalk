@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/header_margin_bottom"
+            android:layout_marginTop="@dimen/header_margin_top"
+            android:gravity="center"
+            android:text="@string/wt_admin_search_flight"
+            android:textSize="@dimen/header_text_size" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <EditText
+                android:id="@+id/et_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/date"
+                android:inputType="textPersonName"></EditText>
+
+            <!-- delete this when wanting to implement a dropdown menu
+                 this code will allow you to make the dorm down menu, you must code the functionality
+                 in the actual java code here, look for examples at:
+                 http://stackoverflow.com/questions/13377361/how-to-create-a-drop-down-list
+
+             <Spinner
+                 android:id="@+id/dd_origin"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_weight="1"
+                 android:gravity="center"
+                 android:ems="@dimen/input_dropdown_size"
+                 android:background="@android:drawable/btn_dropdown"
+                 android:spinnerMode="dropdown" /> -->
+
+            <EditText
+                android:id="@+id/et_origin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/origin"
+                android:inputType="textPersonName"></EditText>
+
+            <!-- delete this when wanting to implement a dropdown menu
+                 this code will allow you to make the dorm down menu, you must code the functionality
+                 in the actual java code here, look for examples at:
+                 http://stackoverflow.com/questions/13377361/how-to-create-a-drop-down-list
+
+            <Spinner
+                android:id="@+id/dd_destination"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:ems="@dimen/input_dropdown_size"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown" /> -->
+
+            <EditText
+                android:id="@+id/et_destination"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/destination"
+                android:inputType="textPersonName"></EditText>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/b_admin_search_flights"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/header_margin_top"
+            android:text="@string/bt_search"
+            android:onClick="displayFlights"/>
+
+    </LinearLayout>
+</ScrollView>

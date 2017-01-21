@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:nestedScrollingEnabled="true">
+
+        <TextView
+            android:text="@string/wt_client_homepage"
+            android:textSize="75px"
+            android:gravity="center"
+            android:layout_marginTop="50px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/welcome" />
+
+        <TextView
+            android:text="Firstname Lastname"
+            android:textSize="50px"
+            android:layout_marginTop="30px"
+            android:layout_marginBottom="50px"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/client_name" />
+
+
+        <TextView
+            android:text="@string/s_booked_flights_separator"
+            android:textSize="40px"
+            android:layout_marginTop="30px"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/booked_flights_txt" />
+
+        <ListView
+            android:textSize="150px"
+            android:layout_marginTop="30px"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:id="@+id/booked_flights"
+            android:nestedScrollingEnabled="true"/>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/b_search_flights"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bt_search_flights_link"
+                android:onClick="onClickSearchFlights">
+            </Button>
+
+            <Button
+                android:id="@+id/b_edit_profile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bt_to_profile_link"
+                android:onClick="onClickEditProfile">
+            </Button>
+
+        </LinearLayout>
+
+        <Button
+            android:text="@string/bt_log_out"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b_logout"
+            android:onClick="Logout"/>
+
+    </LinearLayout>
+
+</ScrollView>

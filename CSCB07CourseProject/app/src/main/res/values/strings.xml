@@ -1,0 +1,56 @@
+<resources>
+    <!-- title strings for the app pages -->
+    <string name="app_name">FlightBook</string>
+
+    <!-- variable name strings -->
+    <string name="user_name">Username</string>
+    <string name="password">Password</string>
+    <string name="Login">Login</string>
+    <string name="e_mail">E-mail</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="address">Address</string>
+    <string name="credit_card">Credit Card</string>
+    <string name="credit_card_expiry_date">Credit Card Expiry Date</string>
+    <string name="origin">Origin</string>
+    <string name="destination">Destination</string>
+    <string name="date">Date</string>
+    <string name="flight_number">Flight no:</string>
+    <string name="client_e_mail">Client\'s e-mail:</string>
+
+    <!-- button text strings (bt means button text) -->
+    <string name="bt_search">Search</string>
+    <string name="bt_sort_by_cost">sort by cost</string>
+    <string name="bt_sort_by_time">sort by time</string>
+    <string name="bt_search_flights_link">Search Flights</string>
+    <string name="bt_to_profile_link">View/Edit Profile</string>
+    <string name="bt_log_out">LOG OUT</string>
+    <string name="bt_return_to_homepage_link">go to homepage</string>
+    <string name="bt_register">Register</string>
+    <string name="bt_update">update</string>
+    <string name="bt_login">Login</string>
+    <string name="bt_flight_load_file">load flight file</string>
+    <string name="bt_client_load_file">load client file</string>
+    <string name="bt_edit_client_info_link">Client Info</string>
+    <string name="bt_view_client_booked_itineraries_link">Client Bookings</string>
+    <string name="bt_edit_client_itineraries__link">Book for Client</string>
+    <string name="bt_return_search_flights_link">Go back to search flights</string>
+
+    <!-- informational text for pages (wt is welcome text, s is a separator, and n is a notification) -->
+    <string name="wt_admin_search_flight">Admin, add a flights for: </string>
+    <string name="wt_for_display_searched_flight">List of itineraries:</string>
+    <string name="wt_client_homepage">Welcome!</string>
+    <string name="wt_admin_homepage">Welcome Admin!</string>
+    <string name="wt_search_flights">Search your Flights!</string>
+        <!-- separators for forms, etc-->
+    <string name="s_booked_flights_separator">Booked Flights:</string>
+    <string name="s_client_load_file">Choose a client file to load:</string>
+    <string name="s_flight_load_file">Choose a flight file to load:</string>
+        <!-- notifications for important events-->
+    <string name="n_of_account_creation">Congratulations! \n You have successfully registered your account.</string>
+    <string name="n_booked_flight">You have successfully booked your flight!</string>
+    <string name="wt_admin_search_flights">Admin can delete itineraries for: </string>
+    <string name="s_list_of_itineraries">List of itineraries:</string>
+    <string name="bt_edit_flight_link">edit flight</string>
+
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/n_of_account_creation"
+        android:gravity="center"
+        android:textSize="17dp"
+        android:typeface="serif"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/b_Homepage"
+        android:text="@string/bt_return_to_homepage_link"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="backToHomepage"/>
+</LinearLayout>
