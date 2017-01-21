@@ -19,11 +19,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ClientHomepage"> </activity>
+        <activity android:name=".PatientHomepage"> </activity>
 
-        <activity android:name=".AdminHomepage"> </activity>
+        <activity android:name=".DoctorHomepage"> </activity>
 
-        <activity android:name=".AdminLogout"> </activity>
+        <activity android:name=".DoctorLogout"> </activity>
 
     </application>
 

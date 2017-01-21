@@ -3,13 +3,10 @@ package cs.b07.cscb07courseproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -19,7 +16,7 @@ import backend.Flight;
 import backend.Itinerary;
 import backend.Trip;
 
-public class ClientHomepage extends AppCompatActivity {
+public class PatientHomepage extends AppCompatActivity {
 
     private Driver driver;
     private Client client;
@@ -30,7 +27,7 @@ public class ClientHomepage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.client_homepage);
+        setContentView(R.layout.patient_homepage);
 
         Intent intent = getIntent();
 
@@ -77,7 +74,7 @@ public class ClientHomepage extends AppCompatActivity {
         }
         lv = (ListView) findViewById(R.id.booked_flights);
         // Adding items to ListView
-        adapter = new ArrayAdapter<String>(ClientHomepage.this, R.layout.list_item, R.id.item_name, items);
+        adapter = new ArrayAdapter<String>(PatientHomepage.this, R.layout.list_item, R.id.item_name, items);
         lv.setAdapter(adapter);
         lv.setClickable(true);
         adapter.setNotifyOnChange(true);

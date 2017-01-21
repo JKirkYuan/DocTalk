@@ -10,7 +10,7 @@ import backend.Driver;
  * Created by mandy on 2016-11-29.
  */
 
-public class AdminLogout extends AppCompatActivity {
+public class DoctorLogout extends AppCompatActivity {
 
     Driver driver;
     @Override

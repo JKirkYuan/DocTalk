@@ -55,7 +55,7 @@ public class Login extends AppCompatActivity {
         //check if the email exists in our database
         //if it does send it to the client home page
         if (email.equals("admin") && password.equals("1234")) {
-            Intent intentLoginAdmin = new Intent(this, AdminHomepage.class);
+            Intent intentLoginAdmin = new Intent(this, DoctorHomepage.class);
             intentLoginAdmin.putExtra("admin", this.admin);
             intentLoginAdmin.putExtra("driver", this.driver);
             startActivity(intentLoginAdmin);
@@ -63,7 +63,7 @@ public class Login extends AppCompatActivity {
         else if(driver.getClientDatabase().getClient().keySet().contains(email)) {
             client = driver.getClient(email);
             if (client.getPassword().equals(password)) {
-                Intent intentLogin = new Intent(this, ClientHomepage.class);
+                Intent intentLogin = new Intent(this, PatientHomepage.class);
                 intentLogin.putExtra("client", client);
                 intentLogin.putExtra("driver", this.driver);
                 startActivity(intentLogin);
