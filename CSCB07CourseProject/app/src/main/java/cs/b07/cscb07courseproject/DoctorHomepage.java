@@ -33,6 +33,9 @@ public class DoctorHomepage extends AppCompatActivity {
         doctor = (Doctor) intent.getSerializableExtra("doctor");
         et_email = (EditText) findViewById(R.id.et_clients_email);
 
+        //fetch and display all the info
+
+
 
     }
 
