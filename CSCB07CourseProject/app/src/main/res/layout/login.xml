@@ -6,14 +6,16 @@
     android:weightSum="1">
 
     <EditText
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
+        android:hint="Username"
         android:ems="10"
-        android:gravity="center|bottom"
         android:id="@+id/et_email" />
 
     <EditText
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
@@ -23,11 +25,15 @@
 
     <Button
         android:text="@string/bt_login"
-        android:layout_width="fill_parent"
+        android:layout_width="273dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:padding="12dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:background="#5174ad"
+        android:textColor="#bab5b0"
         android:id="@+id/b_login_button"
         android:onClick="onClickLogin"/>
-
 
 </LinearLayout>
