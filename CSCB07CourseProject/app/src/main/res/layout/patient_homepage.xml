@@ -52,24 +52,6 @@
             android:layout_width="fill_parent"
             android:layout_alignParentBottom="true">
 
-            <Button
-                android:id="@+id/b_search_flights"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/bt_search_flights_link"
-                android:onClick="onClickSearchFlights">
-            </Button>
-
-            <Button
-                android:id="@+id/b_edit_profile"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/bt_to_profile_link"
-                android:onClick="onClickEditProfile">
-            </Button>
-
         </LinearLayout>
 
         <Button

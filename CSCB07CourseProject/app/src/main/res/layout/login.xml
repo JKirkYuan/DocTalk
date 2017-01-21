@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="@string/Login"
         android:ems="10"
+        android:gravity="center|bottom"
         android:id="@+id/et_email" />
 
     <EditText
@@ -23,18 +23,11 @@
 
     <Button
         android:text="@string/bt_login"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:id="@+id/b_login_button"
         android:onClick="onClickLogin"/>
 
-    <Button
-        android:text="@string/bt_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/b_register_button"
-        android:onClick="onClickRegister"/>
 
 </LinearLayout>
