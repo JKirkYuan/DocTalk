@@ -38,14 +38,28 @@
             android:layout_height="wrap_content"
             android:id="@+id/booked_flights_txt" />
 
-        <ListView
-            android:textSize="150px"
-            android:layout_marginTop="30px"
-            android:gravity="center"
+        <!--<ListView-->
+            <!--android:textSize="150px"-->
+            <!--android:layout_marginTop="30px"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="223dp"-->
+            <!--android:id="@+id/booked_flights"-->
+            <!--android:nestedScrollingEnabled="true"/>-->
+
+        <EditText
             android:layout_width="match_parent"
-            android:layout_height="223dp"
-            android:id="@+id/booked_flights"
-            android:nestedScrollingEnabled="true"/>
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name"
+            android:ems="10"
+            android:id="@+id/patientInput" />
+
+        <Button
+            android:text="Send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendButton" />
 
         <LinearLayout
             android:layout_height="wrap_content"
