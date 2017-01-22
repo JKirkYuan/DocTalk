@@ -2,6 +2,7 @@
     <!-- title strings for the app pages -->
     <string name="app_name">DocTalk</string>
 
+
     <!-- variable name strings -->
     <string name="user_name">Username</string>
     <string name="password">Password</string>

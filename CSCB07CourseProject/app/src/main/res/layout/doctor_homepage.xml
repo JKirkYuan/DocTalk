@@ -17,6 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
+            android:background="#5174ad"
+            android:textColor="#bab5b0"
             android:text="@string/bt_log_out"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -24,6 +26,7 @@
             android:onClick="Logout"/>
 
         <TextView
+            android:layout_marginTop="@dimen/header_margin_top"
             android:layout_width="wrap_content"
             android:text="@string/doc_intro"
             android:layout_height="wrap_content"/>

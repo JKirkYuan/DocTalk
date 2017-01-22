@@ -12,6 +12,7 @@
 
         <TextView
             android:text="Where are you experiencing discomfort?"
+            android:textColor="#199e57"
             android:textSize="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="7dp"

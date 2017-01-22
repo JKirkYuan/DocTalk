@@ -11,6 +11,7 @@
 
         <TextView
             android:text="@string/wt_client_homepage"
+            android:textColor="#2c68c9"
             android:textSize="75px"
             android:gravity="center"
             android:layout_marginTop="50px"
@@ -19,13 +20,23 @@
             android:id="@+id/welcome" />
 
         <Button
+            android:background="#5174ad"
+            android:textColor="#bab5b0"
             android:text="Request"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="160dp"
+            android:layout_width="324dp"
             android:layout_height="wrap_content"
             android:id="@+id/makeRequest"
             android:onClick="makeMedRequest"/>
 
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height= "2dp"
+            android:background="#d8d8d8"
+            />
+
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
@@ -34,11 +45,22 @@
         </LinearLayout>
 
         <Button
+            android:background="#5174ad"
+            android:textColor="#bab5b0"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"
+            android:layout_width="324dp"
             android:text="Diagnosis"
-            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/viewDiagnosis" />
 
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height= "2dp"
+            android:background="#d8d8d8"
+            />
+
         <LinearLayout
             android:layout_height="wrap_content"
             android:layout_width="fill_parent"
@@ -47,8 +69,12 @@
         </LinearLayout>
 
         <Button
+            android:background="#5174ad"
+            android:textColor="#bab5b0"
+            android:layout_marginTop="12dp"
             android:text="@string/bt_log_out"
-            android:layout_width="fill_parent"
+            android:layout_width="324dp"
+            android:layout_gravity="center"
             android:layout_height="wrap_content"
             android:id="@+id/b_logout"
             android:onClick="Logout"/>
