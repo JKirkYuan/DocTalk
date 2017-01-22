@@ -11,11 +11,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.util.SparseBooleanArray;
+
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import java.util.Arrays;
 import java.util.List;
@@ -35,36 +42,43 @@ public class MedRequest extends AppCompatActivity{
     private RelativeLayout mRelativeLayout;
     private ListView mListView;
     private TextView mTextView;
+    private ArrayList<String> selection;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.med_request);
 
-        Intent intent = getIntent();
-
+        selection = new ArrayList<String>();
         // Get the application context
         mContext = getApplicationContext();
+        // Get the activity
+        mActivity = MedRequest.this;
 
 
         // Get the widgets reference from XML layout
-        mRelativeLayout = (RelativeLayout) findViewById(R.id.rl);
         mListView = (ListView) findViewById(R.id.lv);
         mTextView = (TextView) findViewById(R.id.tv);
 
 
         //setUpPage();
         List<String> trees = Arrays.asList(
-                "Alder",
-                "Basswood",
-                "Birch",
-                "Buckeye",
-                "Cedar",
-                "Cherry",
-                "Chestnut",
-                "Hawthorn",
-                "Cypress",
-                "Honeylocust"
+                "Head",
+                "Chest",
+                "Abdomen",
+                "Hips",
+                "Legs",
+                "Feet"
         );
+
+        // Initialize a new ArrayAdapter
+        ArrayAdapter<String> adapter = new ArrayAdapter(
+                mActivity,
+                android.R.layout.simple_list_item_multiple_choice,
+                trees
+        );
+
         // Set the adapter for ListView
         mListView.setAdapter(adapter);
 
@@ -76,6 +90,7 @@ public class MedRequest extends AppCompatActivity{
 
                 // Set the TextView text
                 mTextView.setText("Checked items - ");
+                selection.clear();
 
                 for(int index=0;index<clickedItemPositions.size();index++){
                     // Get the checked status of the current item
@@ -88,13 +103,18 @@ public class MedRequest extends AppCompatActivity{
 
                         // Display the checked items on TextView
                         mTextView.setText(mTextView.getText() + item + " | ");
+                        selection.add(item);
                     }
                 }
             }
         });
     }
+    // Return object designed by Maxim here
+    public void sendMedRequest (View v){
+
     }
-
-
-
 }
+
+
+
+
