@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.media.Rating;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
@@ -14,7 +15,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.util.SparseBooleanArray;
@@ -38,6 +41,8 @@ public class MedRequest extends AppCompatActivity{
 
     private Context mContext;
     private Activity mActivity;
+    private RatingBar ratingBarIn;
+    private EditText commentsIn;
 
     private RelativeLayout mRelativeLayout;
     private ListView mListView;
@@ -55,6 +60,9 @@ public class MedRequest extends AppCompatActivity{
         mContext = getApplicationContext();
         // Get the activity
         mActivity = MedRequest.this;
+
+        ratingBarIn = (RatingBar) findViewById(R.id.ratingBar);
+        commentsIn = (EditText) findViewById(R.id.comments);
 
 
         // Get the widgets reference from XML layout
@@ -81,6 +89,8 @@ public class MedRequest extends AppCompatActivity{
 
         // Set the adapter for ListView
         mListView.setAdapter(adapter);
+        selection.clear();
+
 
         // Set an item click listener for the ListView
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -90,7 +100,6 @@ public class MedRequest extends AppCompatActivity{
 
                 // Set the TextView text
                 mTextView.setText("Checked items - ");
-                selection.clear();
 
                 for(int index=0;index<clickedItemPositions.size();index++){
                     // Get the checked status of the current item
@@ -110,9 +119,17 @@ public class MedRequest extends AppCompatActivity{
         });
     }
     // Return object designed by Maxim here
-    public void sendMedRequest (View v){
-
+    public void sendMedRequest (View v) {
+        selection.add(String.valueOf(ratingBarIn.getRating()));
+        if(commentsIn.getText().toString() != "") {
+            selection.add(commentsIn.getText().toString());
+        }
+        Log.d("v", selection.toString());
+        Intent intentFinishRequest = new Intent(this, FinishMedRequest.class);
+        startActivity(intentFinishRequest);
+        selection.clear();
     }
+
 }
 
 
