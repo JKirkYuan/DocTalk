@@ -110,9 +110,11 @@ public class MedRequest extends AppCompatActivity{
         });
     }
     // Return object designed by Maxim here
-    public void sendMedRequest (View v){
-
+    public void sendMedRequest (View v) {
+        Intent intentFinishRequest = new Intent(this, FinishMedRequest.class);
+        startActivity(intentFinishRequest);
     }
+
 }
 
 

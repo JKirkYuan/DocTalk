@@ -72,5 +72,6 @@ public class PatientHomepage extends AppCompatActivity {
         intentLogout.putExtra("driver", driver);
         startActivity(intentLogout);
     }
+
 }
 
