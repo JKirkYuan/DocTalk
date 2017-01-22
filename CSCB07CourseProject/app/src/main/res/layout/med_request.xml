@@ -51,7 +51,7 @@
             android:textSize="20dp"
             android:layout_marginLeft="7dp"
             android:inputType="text"
-            android:hint="Additionl Comments..."
+            android:hint="Additional Comments..."
             android:ems="10"
             android:layout_weight="1.41" />
 

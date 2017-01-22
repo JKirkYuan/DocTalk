@@ -10,6 +10,7 @@
 
         <TextView
             android:text="@string/wt_admin_homepage"
+            android:textColor="#279e5e"
             android:textSize="@dimen/header_text_size_large"
             android:gravity="center"
             android:layout_marginTop="50px"
