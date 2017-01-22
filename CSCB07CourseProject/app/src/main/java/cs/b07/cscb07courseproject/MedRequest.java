@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.util.SparseBooleanArray;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -41,13 +42,15 @@ public class MedRequest extends AppCompatActivity{
     private RelativeLayout mRelativeLayout;
     private ListView mListView;
     private TextView mTextView;
+    private ArrayList<String> selection;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.med_request);
 
-        Intent intent = getIntent();
-
+        selection = new ArrayList<String>();
         // Get the application context
         mContext = getApplicationContext();
         // Get the activity
@@ -55,23 +58,18 @@ public class MedRequest extends AppCompatActivity{
 
 
         // Get the widgets reference from XML layout
-        mRelativeLayout = (RelativeLayout) findViewById(R.id.rl);
         mListView = (ListView) findViewById(R.id.lv);
         mTextView = (TextView) findViewById(R.id.tv);
 
 
         //setUpPage();
         List<String> trees = Arrays.asList(
-                "H",
-                "Basswood",
-                "Birch",
-                "Buckeye",
-                "Cedar",
-                "Cherry",
-                "Chestnut",
-                "Hawthorn",
-                "Cypress",
-                "Honeylocust"
+                "Head",
+                "Chest",
+                "Abdomen",
+                "Hips",
+                "Legs",
+                "Feet"
         );
 
         // Initialize a new ArrayAdapter
@@ -92,6 +90,7 @@ public class MedRequest extends AppCompatActivity{
 
                 // Set the TextView text
                 mTextView.setText("Checked items - ");
+                selection.clear();
 
                 for(int index=0;index<clickedItemPositions.size();index++){
                     // Get the checked status of the current item
@@ -104,12 +103,17 @@ public class MedRequest extends AppCompatActivity{
 
                         // Display the checked items on TextView
                         mTextView.setText(mTextView.getText() + item + " | ");
+                        selection.add(item);
                     }
                 }
             }
         });
     }
+    // Return object designed by Maxim here
+    public void sendMedRequest (View v){
+
     }
+}
 
 
 

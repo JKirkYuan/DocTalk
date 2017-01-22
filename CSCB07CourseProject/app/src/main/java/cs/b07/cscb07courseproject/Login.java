@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
             startActivity(intentLoginAdmin);
         }
 
-        else if (email.equals("patient") && password.equals("1234")) {
+        else if (email.equals("") && password.equals("")) {
             Intent intentLogin = new Intent(this, PatientHomepage.class);
             intentLogin.putExtra("patient", patient);
             Log.d("f", "This is my message");

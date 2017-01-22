@@ -8,17 +8,9 @@
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:nestedScrollingEnabled="true"
+        android:id="@+id/rl"
         android:weightSum="1">
-        <RelativeLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/rl"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="16dp"
-            tools:context=".MainActivity"
-            android:background="#f7f9f4"
-            >
+
         <TextView
             android:text="Where are you experiencing discomfort?"
             android:textColor="#199e57"
@@ -32,25 +24,35 @@
 
         <ListView
             android:id="@+id/lv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
             android:choiceMode="multipleChoice"
+            android:layout_height="370dp"
+            android:layout_marginBottom="20dp"
             >
         </ListView>
-        </RelativeLayout>
 
 
         <TextView
-            android:text="On a scale from 1-10, how would you rate your discomfort"
+            android:text="On a scale from 1-10, how would you rate your discomfort (higher being greater pain)"
+            android:textColor="#199e57"
+
             android:textSize="20dp"
             android:layout_marginLeft="7dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
 
+        <RatingBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numStars="10"
+            android:stepSize="0.25"
+            android:id="@+id/ratingBar" />
+
         <TextView
             android:text="Extra comments the doctor would be concerned with"
             android:textSize="20dp"
+            android:textColor="#199e57"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="7dp"
             android:layout_width="match_parent"
@@ -67,6 +69,17 @@
             android:hint="Additional Comments..."
             android:ems="10"
             android:layout_weight="1.41" />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:background="#5174ad"
+            android:textColor="#bab5b0"
+            android:text="Send"
+            android:layout_gravity="center"
+            android:layout_width="324dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendRequest"
+            android:onClick="sendMedRequest"/>
 
 
     </LinearLayout>
