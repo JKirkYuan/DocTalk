@@ -30,7 +30,7 @@ public class PatientHomepage extends AppCompatActivity {
     private ArrayList<Itinerary> result;
     private TextView patientInput;
     private String toDatabase;
-    private Button sendButton;
+    private Button sendButton, diagnosticsButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +41,31 @@ public class PatientHomepage extends AppCompatActivity {
 
         Intent intent = getIntent();
 
+        diagnosticsButton = (Button) findViewById(R.id.viewDiagnosis);
+
 //        this.patient = (Patient) intent.getSerializableExtra("patient");
 //        this.driver = (Driver) intent.getSerializableExtra("driver");
 
-        //sendButton = (Button) findViewById(R.id.sendButton);
+//        sendButton = (Button) findViewById(R.id.sendButton);
 //        sendButton.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
 //                toDatabase = patientInput.getText().toString();
 //
 //            }
 //        });
+
+        diagnosticsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                seeDiagnostics(v);
+            }
+        });
+
+    }
+
+    public void seeDiagnostics(View v) {
+        Intent intentDiagnosisPage = new Intent(this, DiagnosisPage.class);
+        intentDiagnosisPage.putExtra("driver", driver);
+        startActivity(intentDiagnosisPage);
     }
 
     public void onNewIntent(Intent intent){

@@ -29,6 +29,10 @@
 
         <activity android:name=".DoctorLogout"> </activity>
 
+        <activity android:name=".DiagnosisPage"> </activity>
+
+        <activity android:name=".DoctorListView"> </activity>
+
     </application>
 
 </manifest>

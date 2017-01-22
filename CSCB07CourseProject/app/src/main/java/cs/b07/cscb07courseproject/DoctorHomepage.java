@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import backend.Doctor;
@@ -23,6 +24,7 @@ public class DoctorHomepage extends AppCompatActivity {
     Driver driver;
     Doctor doctor;
     Patient patient;
+    Button listViewGetter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +36,19 @@ public class DoctorHomepage extends AppCompatActivity {
         et_email = (EditText) findViewById(R.id.et_clients_email);
 
         //fetch and display all the info
-
-
-
+        listViewGetter = (Button) findViewById(R.id.listViewGetter);
+        listViewGetter.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                seeRecords(v);
+            }
+        });
     }
 
-
-
+    public void seeRecords(View v) {
+        Intent intentListView = new Intent(this, DoctorListView.class);
+        intentListView.putExtra("driver", driver);
+        startActivity(intentListView);
+    }
 
     public void Logout(View v) {
         Intent intentLogout = new Intent(this, Login.class);

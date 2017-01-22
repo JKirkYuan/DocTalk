@@ -11,6 +11,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import backend.Doctor;
 import backend.Patient;
 import backend.Driver;
@@ -22,6 +25,7 @@ public class Login extends AppCompatActivity {
     Driver driver = null;
     Patient patient;
     Doctor doctor;
+    public static ArrayList<String> doctorInfo, doctorSubmissions;
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -37,6 +41,13 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        doctorInfo = new ArrayList<String>();
+        doctorSubmissions = new ArrayList<String>();
+        doctorInfo.add("Example1");
+        doctorInfo.add("Example2");
+        doctorSubmissions.add("Example1");
+        doctorSubmissions.add("Example2");
+
         et_email = (EditText) findViewById(R.id.et_email);
         et_password = (EditText) findViewById(R.id.et_password);
         ActivityCompat.requestPermissions(this,
@@ -47,7 +58,6 @@ public class Login extends AppCompatActivity {
     public void onNewIntent(Intent intent){
         this.driver = (Driver) intent.getSerializableExtra("driver");
     }
-
 
     public void onClickLogin(View v) {
         String email = et_email.getText().toString();
