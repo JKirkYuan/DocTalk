@@ -42,10 +42,10 @@ public class DoctorHomepage extends AppCompatActivity {
 
 
 
-    public void onClickLoadAdminLogOut(View v) {
-        Intent intentAdminLogout = new Intent(this, Login.class);
-        intentAdminLogout.putExtra("driver", this.driver);
-        startActivity(intentAdminLogout);
+    public void Logout(View v) {
+        Intent intentLogout = new Intent(this, Login.class);
+        intentLogout.putExtra("driver", driver);
+        startActivity(intentLogout);
     }
 }
 
