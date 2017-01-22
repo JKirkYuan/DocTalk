@@ -37,20 +37,20 @@ public class PatientHomepage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.patient_homepage);
 
-        patientInput = (TextView) findViewById(R.id.patientInput);
+        //patientInput = (TextView) findViewById(R.id.patientInput);
 
         Intent intent = getIntent();
 
-        this.patient = (Patient) intent.getSerializableExtra("patient");
-        this.driver = (Driver) intent.getSerializableExtra("driver");
+//        this.patient = (Patient) intent.getSerializableExtra("patient");
+//        this.driver = (Driver) intent.getSerializableExtra("driver");
 
-        sendButton = (Button) findViewById(R.id.sendButton);
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                toDatabase = patientInput.getText().toString();
-
-            }
-        });
+        //sendButton = (Button) findViewById(R.id.sendButton);
+//        sendButton.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                toDatabase = patientInput.getText().toString();
+//
+//            }
+//        });
     }
 
     public void onNewIntent(Intent intent){
@@ -62,7 +62,9 @@ public class PatientHomepage extends AppCompatActivity {
 
 
     public void makeMedRequest(View v){
-
+        Intent MakeMedRequest = new Intent(this, MedRequest.class);
+        MakeMedRequest.putExtra("driver", driver);
+        startActivity(MakeMedRequest);
     }
 
     public void Logout(View v) {

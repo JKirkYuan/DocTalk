@@ -22,7 +22,7 @@ public class MedRequest extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.patient_homepage);
+        setContentView(R.layout.med_request);
 
         Intent intent = getIntent();
 

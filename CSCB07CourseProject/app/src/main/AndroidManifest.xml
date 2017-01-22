@@ -21,6 +21,8 @@
 
         <activity android:name=".PatientHomepage"> </activity>
 
+        <activity android:name=".MedRequest"> </activity>
+
         <activity android:name=".DoctorHomepage"> </activity>
 
         <activity android:name=".DoctorLogout"> </activity>

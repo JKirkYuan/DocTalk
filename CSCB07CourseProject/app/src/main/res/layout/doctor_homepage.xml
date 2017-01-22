@@ -16,6 +16,12 @@
             android:layout_marginBottom="20px"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+        <Button
+            android:text="@string/bt_log_out"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/b_logout"
+            android:onClick="Logout"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,12 +34,7 @@
             android:layout_marginBottom="10dp"
             android:inputType="textEmailAddress"
             android:layout_height="wrap_content" />
-        <Button
-            android:text="@string/bt_log_out"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/b_logout"
-            android:onClick="Logout"/>
+
 </LinearLayout>
 
 
