@@ -5,6 +5,14 @@
     android:layout_height="match_parent"
     android:weightSum="1">
 
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="411dp"
+        android:layout_height="0dp"
+        app:srcCompat="@drawable/ic_logo"
+        android:id="@+id/imageView"
+        android:layout_weight="0.68" />
+
     <EditText
         android:gravity="center"
         android:layout_marginTop="10dp"
