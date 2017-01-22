@@ -68,6 +68,7 @@
             android:inputType="text"
             android:hint="Additional Comments..."
             android:ems="10"
+            android:id="@+id/comments"
             android:layout_weight="1.41" />
 
         <Button

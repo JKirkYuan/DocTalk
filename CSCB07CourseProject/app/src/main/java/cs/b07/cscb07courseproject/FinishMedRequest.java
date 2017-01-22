@@ -43,4 +43,9 @@ public class FinishMedRequest extends AppCompatActivity{
         setContentView(R.layout.med_request_complete);
         Intent intent = getIntent();
     }
+
+    public void finishRequest (View v) {
+        Intent intentFinishRequest = new Intent(this, PatientHomepage.class);
+        startActivity(intentFinishRequest);
+    }
 }
