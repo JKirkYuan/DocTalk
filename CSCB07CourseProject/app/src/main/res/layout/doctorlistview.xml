@@ -5,10 +5,20 @@
     android:weightSum="1">
 
 
-    <ListView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="242dp"
-        android:id="@+id/listView" />
+        android:layout_height="75dp"
+        android:id="@+id/listView1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/listView2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/listView3" />
 
     <EditText
         android:layout_width="match_parent"

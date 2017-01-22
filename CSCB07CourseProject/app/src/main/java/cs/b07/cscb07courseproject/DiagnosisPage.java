@@ -3,9 +3,12 @@ package cs.b07.cscb07courseproject;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
+import static cs.b07.cscb07courseproject.Login.doctorInfo;
 import static cs.b07.cscb07courseproject.Login.doctorSubmissions;
 
 /**
@@ -13,9 +16,14 @@ import static cs.b07.cscb07courseproject.Login.doctorSubmissions;
  */
 
 public class DiagnosisPage extends AppCompatActivity{
+    TextView listView1In, listView2In, listView3In;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+
 
         setContentView(R.layout.diagnosislistview);
         ListAdapter adapter = new ArrayAdapter<String>(this,
@@ -23,5 +31,10 @@ public class DiagnosisPage extends AppCompatActivity{
 
         ListView listView = (ListView) findViewById(R.id.diagnosisListView);
         listView.setAdapter(adapter);
+
+
+
+
+
     }
 }

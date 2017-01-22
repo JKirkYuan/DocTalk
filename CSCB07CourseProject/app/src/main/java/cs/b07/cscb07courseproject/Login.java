@@ -41,12 +41,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        doctorInfo = new ArrayList<String>();
+doctorInfo = new ArrayList<String>();
+
         doctorSubmissions = new ArrayList<String>();
-        doctorInfo.add("Example1");
-        doctorInfo.add("Example2");
-        doctorSubmissions.add("Example1");
-        doctorSubmissions.add("Example2");
 
         et_email = (EditText) findViewById(R.id.et_email);
         et_password = (EditText) findViewById(R.id.et_password);

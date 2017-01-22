@@ -33,6 +33,9 @@ import java.util.List;
 import backend.Doctor;
 import backend.Patient;
 import backend.Driver;
+
+import static cs.b07.cscb07courseproject.Login.doctorInfo;
+
 /**
  * Created by vincent on 2017-01-21.
  */
@@ -112,7 +115,9 @@ public class MedRequest extends AppCompatActivity{
 
                         // Display the checked items on TextView
                         mTextView.setText(mTextView.getText() + item + " | ");
-                        selection.add(item);
+                        if(!selection.contains(item)) {
+                            selection.add(item);
+                        }
                     }
                 }
             }
@@ -121,12 +126,15 @@ public class MedRequest extends AppCompatActivity{
     // Return object designed by Maxim here
     public void sendMedRequest (View v) {
         selection.add(String.valueOf(ratingBarIn.getRating()));
-        if(commentsIn.getText().toString() != "") {
+        if(commentsIn.getText().toString().length() != 0) {
             selection.add(commentsIn.getText().toString());
         }
-        Log.d("v", selection.toString());
+        else{
+            selection.add("No additional comments");
+        }
         Intent intentFinishRequest = new Intent(this, FinishMedRequest.class);
         startActivity(intentFinishRequest);
+        doctorInfo = selection;
         selection.clear();
     }
 
