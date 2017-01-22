@@ -35,6 +35,7 @@
     <string name="bt_view_client_booked_itineraries_link">Client Bookings</string>
     <string name="bt_edit_client_itineraries__link">Book for Client</string>
     <string name="bt_return_search_flights_link">Go back to search flights</string>
+    <string name="but_med_request">Med Request</string>
 
     <!-- informational text for pages (wt is welcome text, s is a separator, and n is a notification) -->
     <string name="wt_admin_search_flight">Admin, add a flights for: </string>

@@ -18,48 +18,26 @@
             android:layout_height="wrap_content"
             android:id="@+id/welcome" />
 
-        <TextView
-            android:text="Firstname Lastname"
-            android:textSize="50px"
-            android:layout_marginTop="30px"
-            android:layout_marginBottom="50px"
-            android:gravity="center"
+        <Button
+            android:text="Request"
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/client_name" />
+            android:id="@+id/makeRequest"
+            android:onClick="makeMedRequest"/>
 
-
-        <TextView
-            android:text="@string/s_booked_flights_separator"
-            android:textSize="40px"
-            android:layout_marginTop="30px"
-            android:gravity="center"
-            android:layout_width="match_parent"
+        <LinearLayout
             android:layout_height="wrap_content"
-            android:id="@+id/booked_flights_txt" />
+            android:layout_width="fill_parent"
+            android:layout_alignParentBottom="true">
 
-        <!--<ListView-->
-            <!--android:textSize="150px"-->
-            <!--android:layout_marginTop="30px"-->
-            <!--android:gravity="center"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="223dp"-->
-            <!--android:id="@+id/booked_flights"-->
-            <!--android:nestedScrollingEnabled="true"/>-->
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Name"
-            android:ems="10"
-            android:id="@+id/patientInput" />
+        </LinearLayout>
 
         <Button
-            android:text="Send"
+            android:text="Diagnosis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sendButton" />
+            android:id="@+id/viewDiagnosis" />
 
         <LinearLayout
             android:layout_height="wrap_content"
