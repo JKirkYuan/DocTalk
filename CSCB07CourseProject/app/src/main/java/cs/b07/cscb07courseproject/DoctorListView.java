@@ -1,5 +1,6 @@
 package cs.b07.cscb07courseproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -31,16 +32,9 @@ public class DoctorListView extends AppCompatActivity {
         listView1In = (TextView) findViewById(R.id.listView1);
         listView2In = (TextView) findViewById(R.id.listView2);
         listView3In = (TextView) findViewById(R.id.listView3);
-
-        ListAdapter adapter = new ArrayAdapter<String>(this,
-                R.layout.activity_listview, doctorInfo);
+        Log.d("v", "1");
 
 
-        listView1In.setText("Head");
-
-        listView2In.setText("5");
-        listView3In.setText("No additional comments");
-        Log.d("v", "ICU");
         setContentView(R.layout.doctorlistview);
 
 
@@ -49,5 +43,9 @@ public class DoctorListView extends AppCompatActivity {
 
 
 
+    }
+    public void logout(View v) {
+        Intent intentLogout = new Intent(this, Login.class);
+        startActivity(intentLogout);
     }
 }

@@ -53,6 +53,7 @@ public class DoctorHomepage extends AppCompatActivity {
         startActivity(intentListView);
     }
 
+
     public void Logout(View v) {
         Intent intentLogout = new Intent(this, Login.class);
         intentLogout.putExtra("driver", driver);

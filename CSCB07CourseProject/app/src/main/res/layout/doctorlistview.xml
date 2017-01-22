@@ -8,16 +8,22 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="75dp"
+        android:textSize="30dp"
+        android:text="Pain in: Head"
         android:id="@+id/listView1" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="75dp"
+        android:textSize="30dp"
+        android:text="Pain scale: 5"
         android:id="@+id/listView2" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="75dp"
+        android:textSize="30dp"
+        android:text="Additional Comments: None"
         android:id="@+id/listView3" />
 
     <EditText
@@ -32,5 +38,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/submit"
+        android:onClick="logout"
         android:layout_weight="0.01" />
 </LinearLayout>
