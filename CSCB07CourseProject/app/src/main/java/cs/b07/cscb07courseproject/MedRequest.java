@@ -11,11 +11,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.util.SparseBooleanArray;
+
+
+import java.util.Arrays;
+import java.util.List;
 
 import java.util.Arrays;
 import java.util.List;
@@ -44,6 +50,8 @@ public class MedRequest extends AppCompatActivity{
 
         // Get the application context
         mContext = getApplicationContext();
+        // Get the activity
+        mActivity = MedRequest.this;
 
 
         // Get the widgets reference from XML layout
@@ -54,7 +62,7 @@ public class MedRequest extends AppCompatActivity{
 
         //setUpPage();
         List<String> trees = Arrays.asList(
-                "Alder",
+                "H",
                 "Basswood",
                 "Birch",
                 "Buckeye",
@@ -65,6 +73,14 @@ public class MedRequest extends AppCompatActivity{
                 "Cypress",
                 "Honeylocust"
         );
+
+        // Initialize a new ArrayAdapter
+        ArrayAdapter<String> adapter = new ArrayAdapter(
+                mActivity,
+                android.R.layout.simple_list_item_multiple_choice,
+                trees
+        );
+
         // Set the adapter for ListView
         mListView.setAdapter(adapter);
 
@@ -97,4 +113,4 @@ public class MedRequest extends AppCompatActivity{
 
 
 
-}
+

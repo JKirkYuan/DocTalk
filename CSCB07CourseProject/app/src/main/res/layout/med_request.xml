@@ -9,7 +9,16 @@
         android:layout_height="wrap_content"
         android:nestedScrollingEnabled="true"
         android:weightSum="1">
-
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp"
+            tools:context=".MainActivity"
+            android:background="#f7f9f4"
+            >
         <TextView
             android:text="Where are you experiencing discomfort?"
             android:textColor="#199e57"
@@ -18,6 +27,7 @@
             android:layout_marginLeft="7dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/tv"
             />
 
         <ListView
@@ -27,6 +37,7 @@
             android:choiceMode="multipleChoice"
             >
         </ListView>
+        </RelativeLayout>
 
 
         <TextView
