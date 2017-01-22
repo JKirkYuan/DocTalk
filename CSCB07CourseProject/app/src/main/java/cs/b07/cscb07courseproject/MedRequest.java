@@ -89,6 +89,8 @@ public class MedRequest extends AppCompatActivity{
 
         // Set the adapter for ListView
         mListView.setAdapter(adapter);
+        selection.clear();
+
 
         // Set an item click listener for the ListView
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -98,7 +100,6 @@ public class MedRequest extends AppCompatActivity{
 
                 // Set the TextView text
                 mTextView.setText("Checked items - ");
-                selection.clear();
 
                 for(int index=0;index<clickedItemPositions.size();index++){
                     // Get the checked status of the current item
@@ -119,11 +120,14 @@ public class MedRequest extends AppCompatActivity{
     }
     // Return object designed by Maxim here
     public void sendMedRequest (View v) {
-        selection.add(String.valueOf(ratingBarIn.getNumStars()));
-        selection.add(commentsIn.getText().toString());
+        selection.add(String.valueOf(ratingBarIn.getRating()));
+        if(commentsIn.getText().toString() != "") {
+            selection.add(commentsIn.getText().toString());
+        }
         Log.d("v", selection.toString());
         Intent intentFinishRequest = new Intent(this, FinishMedRequest.class);
         startActivity(intentFinishRequest);
+        selection.clear();
     }
 
 }
