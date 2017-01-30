@@ -33,9 +33,8 @@
 
 
         <TextView
-            android:text="On a scale from 1-10, how would you rate your discomfort (higher being greater pain)"
+            android:text="On a scale from 1-5, how would you rate your discomfort (higher being greater pain)"
             android:textColor="#199e57"
-
             android:textSize="20dp"
             android:layout_marginLeft="7dp"
             android:layout_width="match_parent"
@@ -45,7 +44,7 @@
         <RatingBar
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:numStars="10"
+            android:numStars="5"
             android:stepSize="0.25"
             android:id="@+id/ratingBar" />
 

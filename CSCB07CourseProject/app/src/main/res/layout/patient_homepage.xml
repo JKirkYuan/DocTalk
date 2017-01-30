@@ -62,7 +62,8 @@
             android:layout_width="324dp"
             android:text="Diagnosis"
             android:layout_height="wrap_content"
-            android:id="@+id/viewDiagnosis" />
+            android:id="@+id/viewDiagnosis"
+            android:onClick="viewDiagnosis"/>
 
         <View
             android:layout_marginTop="10dp"

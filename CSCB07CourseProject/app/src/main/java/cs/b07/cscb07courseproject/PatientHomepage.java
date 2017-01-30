@@ -82,6 +82,12 @@ public class PatientHomepage extends AppCompatActivity {
         startActivity(MakeMedRequest);
     }
 
+    public void viewDiagnosis(View v){
+        Intent ViewDiagnosis = new Intent(this, PatientDiagnosis.class);
+        ViewDiagnosis.putExtra("driver", driver);
+        startActivity(ViewDiagnosis);
+    }
+
     public void Logout(View v) {
         Intent intentLogout = new Intent(this, Login.class);
         intentLogout.putExtra("driver", driver);
